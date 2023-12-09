@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/appthemecolor"
     tools:context=".MainActivity" >
 
     <LinearLayout
@@ -17,10 +18,11 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:contentDescription="@string/content_imgclgcoins"
-            app:srcCompat="@drawable/collegecoinslogo" />
+            app:srcCompat="@drawable/collegecoinslogo"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="64dp"
             android:orientation="vertical" >
             <TextView
@@ -37,8 +39,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
                 android:textSize="18dp"
-                android:text="Current Balance: P0.00" />
+                android:text="Amount to pay: P0.00" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnaboutus"
+            android:layout_marginLeft="8dp"
+            android:padding="0dp"
+            android:layout_width="48dp"
+            android:layout_height="32dp"
+            android:onClick="openAbout"
+            android:textSize="16dp"
+            android:text="?"/>
     </LinearLayout>
 
     <TextView
@@ -59,6 +71,7 @@
             android:id="@+id/btnstart"
             android:layout_width="128dp"
             android:layout_height="48dp"
+            android:onClick="openStart"
             android:text="Start" />
 
         <Button
@@ -69,16 +82,11 @@
             android:text="Edit Name" />
 
         <Button
-            android:id="@+id/btnupdate"
+            android:id="@+id/btnhistory"
             android:layout_width="128dp"
             android:layout_height="48dp"
-            android:text="Update" />
-
-        <Button
-            android:id="@+id/btnexit"
-            android:layout_width="128dp"
-            android:layout_height="48dp"
-            android:text="Exit" />
+            android:onClick="openHistory"
+            android:text="History" />
 
     </LinearLayout>
 

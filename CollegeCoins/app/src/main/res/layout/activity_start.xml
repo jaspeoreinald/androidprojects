@@ -6,43 +6,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/appthemecolor"
-    tools:context=".EditActivity">
+    tools:context=".StartActivity">
 
     <Button
-        android:id="@+id/btnback"
+        android:id="@+id/btngohome"
         android:layout_marginBottom="50dp"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:text="Back" />
 
     <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:text="Edit your username!" />
-
-    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center" >
+        android:gravity="center"
+        android:text="What would you like to do? "/>
 
-        <EditText
-            android:id="@+id/etxtnick"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:hint="Your desired nickname"
-            android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/btnsave"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="Save" />
+            android:id="@+id/btnadd"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:onClick="add"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/btnsub"
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:onClick="remove"
+            android:text="Remove" />
 
     </LinearLayout>
+
+
 
 </LinearLayout>
