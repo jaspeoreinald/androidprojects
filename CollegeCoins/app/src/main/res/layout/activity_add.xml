@@ -8,8 +8,8 @@
     android:background="@color/appthemecolor"
     tools:context=".AddActivity">
 
-
     <TextView
+        android:layout_marginTop="24dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -61,7 +61,6 @@
             android:layout_width="128dp"
             android:layout_height="48dp"
             android:text="Submit" />
-
 
     </LinearLayout>
 

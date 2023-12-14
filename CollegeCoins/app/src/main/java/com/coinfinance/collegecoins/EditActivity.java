@@ -12,9 +12,9 @@ import android.widget.Toast;
 
 public class EditActivity extends AppCompatActivity {
     EditText input;
-Button save, back;
+Button save;
 Integer userid=1;
-String inputforuser, inputforbal="0.00";
+String inputforuser;
 SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,22 +30,11 @@ SQLiteDatabase db;
                 ContentValues cn = new ContentValues();
                 cn.put("id", userid);
                 cn.put("name", inputforuser);
-                cn.put("bal", inputforbal);
                 db.update("info", cn, "id=" + userid, null);
                 Toast.makeText(getApplicationContext(),"You are now " + inputforuser,Toast.LENGTH_LONG).show();
                 input.setText("");
                 db.close();
             }
         });
-
-        back = (Button)findViewById(R.id.btnback);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-
-            }
-        });
-
     }
 }

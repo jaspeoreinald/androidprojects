@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CollegeCoins</string>
     <string name="content_imgclgcoins">Image of CollegeCoins</string>
+    <string name="version">CollegeCoins-0.0.1-UNRELEASED</string>
+    <string name="companyemail">edutoken@sample.com</string>
     <color name="appthemecolor">#F6F2E6</color>
 </resources>

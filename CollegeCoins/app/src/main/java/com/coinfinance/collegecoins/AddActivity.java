@@ -3,6 +3,7 @@ package com.coinfinance.collegecoins;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import android.widget.Toast;
 public class AddActivity extends AppCompatActivity {
 String categories[] = {"Electric Utilities","Water Utilities","Internet","Telecoms","Credit Cards","Loans","Government","Insurance","Transportation",
 "Real Estate","Healthcare","Schools","Others"};
-Integer datatid;
+Integer datatid, userid=1;
 String datacategory, datanoc, dataamount, dataduedate;
 Button sbmt;
 AutoCompleteTextView actv;
@@ -62,8 +63,32 @@ SQLiteDatabase db;
                 cn.put("nameofcompany", datanoc);
                 cn.put("amount", dataamount);
                 cn.put("duedate", dataduedate);
+
+                //INSERT TO DATA TABLE
                 db.insert("data", null, cn);
+
+                // CLEAR CONTENT VALUES FIRST
+                cn.clear();
+
+                // PERFORM SUM AND UPDATE THE info TABLE
+                Cursor cursor = db.rawQuery("SELECT SUM(amount) FROM data;", null);
+
+                if (cursor.moveToFirst()) {
+                    String sumAmount = cursor.getString(0);
+
+                    ContentValues updateInfo = new ContentValues();
+                    updateInfo.put("bal", sumAmount);
+
+                    db.update("info", updateInfo, "id=" + userid, null);
+                }
+
+                // CLOSE CURSOR AFTER USE
+                cursor.close();
+
+                // SEND TOAST FOR CONFIRMATION
                 Toast.makeText(getApplicationContext(),"Transaction ID: " + datatid,Toast.LENGTH_LONG).show();
+
+                // RESET EVERYTHING & CLOSE DATABASE
                 tid.setText("");
                 actv.setText("");
                 noc.setText("");

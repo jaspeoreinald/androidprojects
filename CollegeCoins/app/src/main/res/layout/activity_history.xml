@@ -9,6 +9,7 @@
     tools:context=".HistoryActivity">
 
     <TextView
+        android:layout_marginTop="24dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Enter Transaction ID" />
@@ -27,10 +28,12 @@
 
         <Button
             android:id="@+id/btnsearch"
-            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Search"/>
+            android:layout_gravity="center"
+            android:text="Search"
+            android:background="@color/appthemecolor" />
 
     </LinearLayout>
 
@@ -49,6 +52,7 @@
             android:focusable="false"
             android:enabled="false"
             android:cursorVisible="false"
+            android:textColor="@color/black"
             android:text="" />
 
         <EditText
@@ -60,6 +64,7 @@
             android:focusable="false"
             android:enabled="false"
             android:cursorVisible="false"
+            android:textColor="@color/black"
             android:text="" />
 
         <EditText
@@ -71,6 +76,7 @@
             android:focusable="false"
             android:enabled="false"
             android:cursorVisible="false"
+            android:textColor="@color/black"
             android:text="" />
 
         <EditText
@@ -82,6 +88,7 @@
             android:focusable="false"
             android:enabled="false"
             android:cursorVisible="false"
+            android:textColor="@color/black"
             android:text="" />
 
         <EditText
@@ -93,16 +100,19 @@
             android:focusable="false"
             android:enabled="false"
             android:cursorVisible="false"
+            android:textColor="@color/black"
             android:text="" />
 
+        <Button
+            android:id="@+id/btnremove"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Remove"
+            android:background="@color/appthemecolor"
+            android:enabled="false"
+            android:visibility="invisible" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/angry_btn"
-        android:text="Search"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:background="@drawable/buttonshape" />
 </LinearLayout>
