@@ -8,13 +8,6 @@
     android:background="@color/appthemecolor"
     tools:context=".HistoryActivity">
 
-    <Button
-        android:id="@+id/btnreturn2"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Back" />
-
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -25,11 +18,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <AutoCompleteTextView
-            android:id="@+id/actvtid"
+        <EditText
+            android:id="@+id/txtsearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Transaction ID" />
+            android:inputType="number"
+            android:hint="Transaction ID"  />
+
+        <Button
+            android:id="@+id/btnsearch"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Search"/>
 
     </LinearLayout>
 
@@ -37,20 +38,71 @@
         android:layout_marginTop="50dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
         <EditText
+            android:id="@+id/edittext1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:focusable="false"
+            android:enabled="false"
+            android:cursorVisible="false"
+            android:text="" />
+
         <EditText
+            android:id="@+id/edittext2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:focusable="false"
+            android:enabled="false"
+            android:cursorVisible="false"
+            android:text="" />
+
         <EditText
+            android:id="@+id/edittext3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:focusable="false"
+            android:enabled="false"
+            android:cursorVisible="false"
+            android:text="" />
+
         <EditText
+            android:id="@+id/edittext4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:focusable="false"
+            android:enabled="false"
+            android:cursorVisible="false"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/edittext5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:focusable="false"
+            android:enabled="false"
+            android:cursorVisible="false"
+            android:text="" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/angry_btn"
+        android:text="Search"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape" />
 </LinearLayout>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/appthemecolor"
     tools:context=".AddActivity">
 
 
@@ -47,6 +48,13 @@
             android:inputType="number"
             android:hint="Amount" />
 
+        <EditText
+            android:id="@+id/txtdueday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="Due Date (mm/dd)" />
+
         <Button
             android:id="@+id/btnsubmit"
             android:layout_gravity="center_horizontal"
@@ -54,16 +62,7 @@
             android:layout_height="48dp"
             android:text="Submit" />
 
-        <Button
-            android:id="@+id/btnreturn"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_width="128dp"
-            android:layout_height="48dp"
-            android:text="Return" />
 
     </LinearLayout>
-
-
 
 </LinearLayout>

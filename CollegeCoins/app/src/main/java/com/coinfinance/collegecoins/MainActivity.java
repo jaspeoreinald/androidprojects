@@ -88,7 +88,7 @@ Handler handler;
     }
     public void openStart(View view) {
 
-        startActivity(new Intent(this, StartActivity.class));
+        startActivity(new Intent(this, AddActivity.class));
     }
 
     public void openEdit(View view) {
